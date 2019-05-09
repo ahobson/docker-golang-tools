@@ -1,0 +1,8 @@
+#!/bin/bash
+
+exec /usr/local/bin/docker \
+     run -i --rm=true \
+     -v ${HOME}:${HOME}:cached \
+     -w $PWD \
+     gopls-bingo:local \
+     "$@"
